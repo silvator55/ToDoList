@@ -1,0 +1,49 @@
+﻿@model ToDoList.Models.ToDo
+
+@{
+    ViewData["Title"] = "Create Task";
+}
+
+<div class="container my-5">
+    <div class="card border-0 shadow-lg p-4 mx-auto" style="max-width: 600px; border-radius: 20px; background: rgba(255, 255, 255, 0.95);">
+        <h2 class="fw-bold mb-4 text-center">Create New Task</h2>
+
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label fw-semibold">Title</label>
+                <input asp-for="Title" class="form-control" style="border-radius: 8px;" placeholder="Enter task title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label fw-semibold">Description</label>
+                <textarea asp-for="Description" class="form-control" rows="3" style="border-radius: 8px;" placeholder="Enter description (optional)"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Deadline" class="form-label fw-semibold">Deadline</label>
+                <input asp-for="Deadline" class="form-control" type="datetime-local" style="border-radius: 8px;" />
+                <span asp-validation-for="Deadline" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Attachment File</label>
+                <input type="file" name="file" class="form-control" style="border-radius: 8px;" />
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <a asp-action="Index" class="btn btn-secondary px-4" style="border-radius: 8px;">Back to List</a>
+                <button type="submit" class="btn btn-primary px-4 fw-semibold" style="border-radius: 8px;">Save Task</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,110 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* ========================================== */
+/*           تنسيقات الخلفية والكارت          */
+/* ========================================== */
+
+body {
+    background-image: url('../images/ToDoList.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* الكارت الأبيض المرفوع */
+.hero-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 45px 60px;
+    max-width: 950px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* العناوين والنصوص */
+.main-title {
+    font-weight: 800;
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    color: #555555;
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    line-height: 1.5;
+}
+
+/* الزرار الأزرق/البنفسجي */
+.btn-cta {
+    background: linear-gradient(135deg, #2563eb, #6366f1);
+    border: none;
+    padding: 12px 32px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .btn-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+        color: #ffffff;
+    }
+
+/* فقرات المميزات */
+.features-list {
+    margin-top: 35px;
+    text-align: left;
+    font-size: 0.98rem;
+    color: #333333;
+    line-height: 1.6;
+}
+
+    .features-list p {
+        margin-bottom: 18px;
+    }

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="landing-bg">
+    <div class="hero-card">
+        <h1 class="main-title">Welcome to ToDoListApp</h1>
+        <p class="hero-desc">
+            Organize your tasks, manage deadlines, and track your progress effortlessly. Our app helps you stay productive and focused every day.
+        </p>
+
+        <div class="my-4">
+            <a asp-controller="Tasks" asp-action="Index" class="btn btn-cta text-decoration-none">
+                View your tasks
+            </a>
+        </div>
+
+        <div class="features-list text-start">
+            <p>
+                <strong>Why use ToDoListApp?</strong> Because keeping track of your daily tasks shouldn't be a hassle. With our clean and simple interface, you can add, edit, and delete tasks with ease.
+            </p>
+            <p>
+                <strong>Stay on top of deadlines:</strong> The app highlights urgent tasks so you never miss important deadlines. You can filter by date and quickly see what's due soon.
+            </p>
+            <p>
+                <strong>File attachments:</strong> Upload files to your tasks and access them directly from the app. Everything is organized in one place for maximum efficiency.
+            </p>
+        </div>
+    </div>
+</div>
